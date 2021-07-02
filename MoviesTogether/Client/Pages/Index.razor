@@ -1,0 +1,29 @@
+﻿@page "/"
+@inject NavigationManager Navigation
+
+<header class="showcase">
+    <div class="showcase-top"></div>
+    <div class="showcase-content">
+        <h1>See what's next</h1>
+        <p>Watch movies together</p>
+
+        <input @bind="roomName" type="text" placeholder="Room Name:">
+
+        <div class="demo-btns">
+            <div class="info">
+                <div class="buttons">
+                    <a class="modal__trigger" @onclick="GoToRoom">Create Room or Join Room</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+@code{
+    private string roomName;
+
+    public void GoToRoom()
+    {
+        Navigation.NavigateTo($"room/{roomName}");
+    }
+}

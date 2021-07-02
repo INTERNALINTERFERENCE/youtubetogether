@@ -1,0 +1,164 @@
+﻿:root {
+    --primary-color: #e50914;
+    --dark-color: #141414;
+    --light-color: #f4f4f4;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    background: #000;
+    color: #999;
+}
+
+ul {
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    color: #fff;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+p {
+    margin: 0.5rem 0;
+}
+
+img {
+    width: 100%;
+}
+
+.showcase {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background: url('https://i.ibb.co/rFGDc9G/drama.jpg') no-repeat center center/cover;
+}
+
+    .showcase::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        background: rgba(0, 0, 0, 0.6);
+        box-shadow: inset 120px 100px 250px #000000, inset -120px -100px 250px #000000;
+    }
+
+.showcase-top {
+    position: relative;
+    z-index: 2;
+    height: 90px;
+}
+
+    .showcase-top img {
+        width: 170px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin-left: 0;
+    }
+
+    .showcase-top a {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translate(-50%, -50%);
+    }
+
+.showcase-content {
+    position: relative;
+    z-index: 2;
+    width: 65%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 9rem;
+}
+
+    .showcase-content h1 {
+        font-weight: 700;
+        font-size: 5.2rem;
+        line-height: 1.1;
+        margin: 0 0 2rem;
+    }
+
+    .showcase-content p {
+        text-transform: uppercase;
+        color: #fff;
+        font-weight: 400;
+        font-size: 1.9rem;
+        line-height: 1.25;
+        margin: 0 0 2rem;
+    }
+
+
+
+
+
+.modal__trigger {
+    border-radius: 8px;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: 1px;
+    transition: all 0.3s ease-out;
+    position: relative;
+    display: inline-block;
+    padding: 1.2rem 2.4rem;
+    line-height: 1;
+    cursor: pointer;
+    background-color: darkslategray;
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 26%);
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+
+.modal__trigger--active {
+    z-index: 10;
+}
+
+.modal__trigger:hover {
+    background: #e5d3d6;
+}
+
+
+input[type=text] {
+    width: 50%;
+    border: 2px solid #aaa;
+    border-radius: 4px;
+    margin: 8px 0;
+    outline: none;
+    padding: 8px;
+    box-sizing: border-box;
+    transition: .3s;
+}
+
+    input[type=text]:focus {
+        border-color: midnightblue;
+        box-shadow: 0 0 8px 0 dodgerBlue;
+    }
